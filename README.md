@@ -291,8 +291,6 @@ flutter run
 </tr>
 </table>
 
-*Replace these placeholders with actual screenshots of your app*
-
 </div>
 
 ## 🎯 Roadmap
@@ -393,6 +391,7 @@ Special thanks to:
 **Status**: 🔄 Actively Maintained & Continuously Updated
 
 </div>
+
 
 
 
