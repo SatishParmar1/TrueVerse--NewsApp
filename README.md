@@ -11,8 +11,8 @@ A modern, feature-rich news application built with Flutter that delivers real-ti
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.0+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart Version](https://img.shields.io/badge/Dart-3.0+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/yourusername/trueverse/pulls)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/yourusername/trueverse/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/SatishParmar1/trueverse/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/SatishParmar1/trueverse/graphs/commit-activity)
 
 [Features](#-features) • [Architecture](#-architecture) • [Getting Started](#-getting-started) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
@@ -188,7 +188,7 @@ lib/
 
 1️⃣ **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/trueverse.git
+git clone [https://github.com/SatishParmar1/TruevVerse--NewsApp.git]
 cd trueverse
 ```
 
@@ -326,10 +326,10 @@ flutter run
 
 **Contributions are what make the open source community amazing!** 
 
-[![Contributors](https://img.shields.io/github/contributors/yourusername/trueverse?style=for-the-badge)](https://github.com/yourusername/trueverse/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/yourusername/trueverse?style=for-the-badge)](https://github.com/yourusername/trueverse/network/members)
-[![Stargazers](https://img.shields.io/github/stars/yourusername/trueverse?style=for-the-badge)](https://github.com/yourusername/trueverse/stargazers)
-[![Issues](https://img.shields.io/github/issues/yourusername/trueverse?style=for-the-badge)](https://github.com/yourusername/trueverse/issues)
+[![Contributors](https://img.shields.io/github/contributors/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/network/members)
+[![Stargazers](https://img.shields.io/github/stars/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/stargazers)
+[![Issues](https://img.shields.io/github/issues/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/issues)
 
 </div>
 
@@ -348,15 +348,6 @@ flutter run
 - Add comments for complex logic
 - Write tests for new features
 
-## 📄 License
-
-<div align="center">
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-
-</div>
 
 ## 👨‍💻 Author
 
@@ -364,10 +355,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 **Your Name**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourusername)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SatishParmar1)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/satish-parmar-ak978312)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:satishparmarparmar486@gmail.com)
 
 </div>
 
@@ -391,9 +381,9 @@ Special thanks to:
 
 ### 📊 Project Stats
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/trueverse?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/trueverse?style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/yourusername/trueverse?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
 
 **Made with ❤️ using Flutter**
 
@@ -404,3 +394,4 @@ Special thanks to:
 **Status**: 🔄 Actively Maintained & Continuously Updated
 
 </div>
+
