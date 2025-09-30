@@ -10,7 +10,6 @@ A modern, feature-rich news application built with Flutter that delivers real-ti
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.0+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart Version](https://img.shields.io/badge/Dart-3.0+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/SatishParmar1/trueverse/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/SatishParmar1/trueverse/graphs/commit-activity)
 
@@ -394,4 +393,5 @@ Special thanks to:
 **Status**: 🔄 Actively Maintained & Continuously Updated
 
 </div>
+
 
