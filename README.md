@@ -386,11 +386,12 @@ Special thanks to:
 
 ⭐ **Star this repo if you find it useful!** ⭐
 
-![Profile Views](https://komarev.com/ghpvc/?username=yourusername&color=blueviolet&style=for-the-badge)
+![Profile Views](https://komarev.com/ghpvc/?username=SatishParmar1&color=blueviolet&style=for-the-badge)
 
 **Status**: 🔄 Actively Maintained & Continuously Updated
 
 </div>
+
 
 
 
