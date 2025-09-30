@@ -10,8 +10,8 @@ A modern, feature-rich news application built with Flutter that delivers real-ti
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.0+-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Dart Version](https://img.shields.io/badge/Dart-3.0+-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/pulls)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/graphs/commit-activity)
 
 [Features](#-features) • [Architecture](#-architecture) • [Getting Started](#-getting-started) • [Screenshots](#-screenshots) • [Contributing](#-contributing)
 
@@ -187,7 +187,7 @@ lib/
 
 1️⃣ **Clone the repository**
 ```bash
-git clone [https://github.com/SatishParmar1/TruevVerse--NewsApp.git]
+git clone [https://github.com/SatishParmar1/TrueVerse--NewsApp.git]
 cd trueverse
 ```
 
@@ -323,10 +323,10 @@ flutter run
 
 **Contributions are what make the open source community amazing!** 
 
-[![Contributors](https://img.shields.io/github/contributors/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/network/members)
-[![Stargazers](https://img.shields.io/github/stars/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/stargazers)
-[![Issues](https://img.shields.io/github/issues/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TruevVerse--NewsApp/issues)
+[![Contributors](https://img.shields.io/github/contributors/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/network/members)
+[![Stargazers](https://img.shields.io/github/stars/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/stargazers)
+[![Issues](https://img.shields.io/github/issues/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)](https://github.com/SatishParmar1/TrueVerse--NewsApp/issues)
 
 </div>
 
@@ -378,9 +378,9 @@ Special thanks to:
 
 ### 📊 Project Stats
 
-![GitHub repo size](https://img.shields.io/github/repo-size/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SatishParmar1/TruevVerse--NewsApp?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SatishParmar1/TrueVerse--NewsApp?style=for-the-badge)
 
 **Made with ❤️ using Flutter**
 
@@ -391,6 +391,7 @@ Special thanks to:
 **Status**: 🔄 Actively Maintained & Continuously Updated
 
 </div>
+
 
 
 
