@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../constants/appConstant.dart';
+import 'home_page_bloc.dart';
 
 class StoryOpenPage extends StatelessWidget {
   final String url;
    StoryOpenPage({super.key, required this.url});
-  final timerController = LinearTimerController();
+
 
   ///Restart timer
 
 
 
   // Function called when right side is tapped
-  void onRightSideTap() {
-    timerController.restart();
+  void onRightSideTap(BuildContext context) {
+    context.read<HomePageBloc>().add(RestartTimerEvent());
     print("Right side tapped!");
     // Add your custom functionality here
   }
 
   // Function called when left side is tapped
-  void onLeftSideTap() {
-    timerController.restart();
+  void onLeftSideTap(BuildContext context) {
+    context.read<HomePageBloc>().add(RestartTimerEvent());
     print("Left side tapped!");
     // Add your custom functionality here
   }
@@ -31,41 +32,46 @@ class StoryOpenPage extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width*1;
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(
+        titleSpacing: 0,
+        backgroundColor: Constants.widgetBackgoundColor,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("asdfasdf",style: TextStyle(fontSize: Constants.titleFontSize,color: Constants.fontColor),overflow: TextOverflow.ellipsis,),
+            SizedBox(height: 4,),
+            Text("4h ago",style: TextStyle(fontSize: Constants.subtitleFontSize,color: Constants.fontColor.withValues(alpha: 0.6))),
+          ],
+        ),
+
+      ),
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTapDown: (details) {
           final tapX = details.localPosition.dx;
 
           if (tapX < screenWidth / 2) {
-            onLeftSideTap();
+            onLeftSideTap(context);
           } else {
-            onRightSideTap();
+            onRightSideTap(context);
           }
         },
         child: Column(
           children: [
-            SizedBox(height: 40,),
-            LinearTimer(
-              durationSeconds: 5,
-              color: Colors.white,
-              onCompleted: () {
-                print("Timer finished!");
+            SizedBox(height: 10,),
+            BlocBuilder<HomePageBloc, HomePageState>(
+              builder: (context, state) {
+                return LinearTimer(
+                  durationSeconds: 5,
+                  color: Constants.backgoundColor,
+                  onCompleted: () {
+                    print("Timer completed ✅");
+                  },
+                  controller: state.timerController,
+                );
               },
             ),
-            Container(
-              padding:  EdgeInsets.symmetric(horizontal: Constants.horizontalPadding, vertical: Constants.verticalPadding),
-              child: ListTile(
-                title: const Text(
-                  "Hello world",
-                  style: TextStyle(color: Colors.white),
-                ),
-                subtitle: const Text(
-                  "last 2 days",
-                  style: TextStyle(color: Colors.white70),
-                ),
-              ),
-            ),
-            // Make the image take the remaining space
+
             Expanded(
               child: Image.network(
                 url,
@@ -102,7 +108,6 @@ class LinearTimerController {
     if (_restart != null) _restart!();
   }
 }
-
 class LinearTimer extends StatefulWidget {
   final int durationSeconds; // total duration in seconds
   final Color color; // progress color
@@ -137,12 +142,14 @@ class _LinearTimerState extends State<LinearTimer>
     // Assign restart function to controller
     widget.controller?._restart = _restartTimer;
 
+    // ✅ Attach listener only once
+    _controller.addStatusListener(_statusListener);
+
     _startTimer();
   }
 
   void _startTimer() {
     _controller.forward(from: 0);
-    _controller.addStatusListener(_statusListener);
   }
 
   void _statusListener(AnimationStatus status) {

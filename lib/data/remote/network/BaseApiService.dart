@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
 abstract class BaseApiService {
-  static const String _stagingURL = "https://api.regripindia.com/";
-  static const String _prodEndpoint = "https://api.regripindia.com/";
+  static const String _stagingURL = "https://newsapi.org/v2/everything?";
+  static const String _prodEndpoint = "https://newsapi.org/v2/everything?";
   // static const String _debugLocalEndpoint = "http://10.0.2.2:8000/";
   //static const String _productionEndpoint = "https://api.kelola.co/";
 
