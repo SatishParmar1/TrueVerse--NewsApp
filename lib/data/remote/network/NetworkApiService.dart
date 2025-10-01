@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
+import 'package:trueverse/data/remote/network/ApiEndPoints.dart';
 
 
 import '../../sharedpref/app_preferences.dart';
@@ -15,9 +16,11 @@ class NetworkApiService extends BaseApiService {
     dynamic responseJson;
     try {
       Dio _dio =
-          Dio(BaseOptions(headers: {'Authorization': 'bearer ' + token!}))
+          Dio(BaseOptions(headers:{
+            HttpHeaders.contentTypeHeader: "application/json",
+          }))
             ..interceptors.add(Logging());
-      final response = await _dio.get(BaseApiService.BASE_URL + url);
+      final response = await _dio.get('${BaseApiService.BASE_URL}$url&apiKey=${ApiEndPoints.APIKEY}');
       responseJson = returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet Connection');

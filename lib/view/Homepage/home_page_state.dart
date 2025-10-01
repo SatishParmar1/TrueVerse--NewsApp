@@ -1,6 +1,15 @@
 part of 'home_page_bloc.dart';
 
-@immutable
-sealed class HomePageState {}
+class HomePageState {
+  final LinearTimerController timerController;
 
-final class HomePageInitial extends HomePageState {}
+  HomePageState({required this.timerController});
+
+  HomePageState copyWith({
+    LinearTimerController? timerController,
+  }) {
+    return HomePageState(
+      timerController: timerController ?? this.timerController,
+    );
+  }
+}

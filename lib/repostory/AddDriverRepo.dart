@@ -10,10 +10,9 @@ class AddDriverRepo {
   final BaseApiService _apiService = NetworkApiService();
 
   @override
-  Future<bool?> addDriver(String formData, BuildContext context) async {
+  Future<bool?> addDriver(BuildContext context, String Endpoint) async {
     try {
-      dynamic response = await _apiService.postResponseString(
-          ApiEndPoints().TR_DRIVER_ADD, formData);
+      dynamic response = await _apiService.getResponse(Endpoint);
 
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text(response['message'])));
