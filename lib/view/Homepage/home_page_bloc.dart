@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
-import 'package:trueverse/view/Homepage/storyOpen.dart';
+import 'package:trueverse/view/Story/storyOpen.dart';
 
 part 'home_page_event.dart';
 part 'home_page_state.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../view/Deshboard/deshboard.dart';
 import '../../view/Homepage/homepage.dart';
-import '../../view/Homepage/storyOpen.dart';
+import '../../view/Story/storyOpen.dart';
 
 class Routes {
   Routes._();
@@ -22,8 +22,7 @@ class Routes {
   final args =
   ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
   return StoryOpenPage(
-    url:args['url'],);
+    index:args['index'],);
   },
-
   };
 }

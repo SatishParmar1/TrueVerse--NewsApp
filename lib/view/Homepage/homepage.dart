@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:trueverse/constants/appConstant.dart';
 
 import '../Search/searchPage.dart';
+import '../Story/story_page_bloc.dart';
 
-class NewsHomePage extends StatelessWidget {
-
+class NewsHomePage extends StatefulWidget {
    NewsHomePage( {super.key,});
 
+  @override
+  State<NewsHomePage> createState() => _NewsHomePageState();
+}
 
+class _NewsHomePageState extends State<NewsHomePage> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    final bloc = context.read<StoryPageBloc>();
+    if (bloc.state.responseData == null) {
+      bloc.add(FetchData());
+    }
+  }
    @override
    Widget build(BuildContext context) {
      final Color themeColor = Constants.themeColor;
@@ -42,12 +57,12 @@ class NewsHomePage extends StatelessWidget {
                        child: SearchBarApp(),
                      ),
                      const SizedBox(height: 8),
-                     _buildStoryCircle(storyImages),
+                     _buildStoryCircle(),
                    ],
                  ),
                ),
              ),
-         
+
              // Pinned category chips
              SliverPersistentHeader(
                pinned: true,
@@ -60,7 +75,7 @@ class NewsHomePage extends StatelessWidget {
                  ),
                ),
              ),
-         
+
              // Breaking News & Articles
              SliverToBoxAdapter(
                child: Padding(
@@ -78,7 +93,7 @@ class NewsHomePage extends StatelessWidget {
                  ),
                ),
              ),
-         
+
              SliverList(
                delegate: SliverChildListDelegate([
                  Padding(
@@ -120,7 +135,6 @@ class NewsHomePage extends StatelessWidget {
       ),
     );
   }*/
-
   Widget _buildCategoryChips(Color themeColor) {
     final categories = ['For You', 'Entertainment', 'Sports','Technology', 'Business', 'Health','Science'];
     final selectedCategory = 'For You';
@@ -129,7 +143,7 @@ class NewsHomePage extends StatelessWidget {
       height: 40,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        padding: EdgeInsets.symmetric(horizontal: Constants.horizontalPadding),
         itemCount: categories.length,
         separatorBuilder: (context, index) => const SizedBox(width: 10),
         itemBuilder: (context, index) {
@@ -159,52 +173,68 @@ class NewsHomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildStoryCircle(List<String> imageUrls) {
-    return SizedBox(
-      height: 80, // adjust based on your circle size
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        itemCount: imageUrls.length,
-        separatorBuilder: (context, index) => const SizedBox(width: 12),
-        itemBuilder: (context, index) {
-          final imageUrl = imageUrls[index];
-          return GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed('/StoryOpenPage',arguments: {'url':imageUrl});
-              print('Tapped story $index');
-            },
-            child: Container(
-              padding: EdgeInsets.all(3),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    Color(0xFF290849), // deep purple (theme base)
-                    Color(0xFF290849), // rich violet
-                    Color(0xFF8C2DE3), // bright purple
-                    Color(0xFF290849), // neon magenta
-                    Color(0xFF6A1B9A), // medium purple
-                    Color(0xFF290849), // deep blue
-                    Color(0xFF290849), // electric purple
-                  ],
-                  stops: [0.0, 0.15, 0.3, 0.5, 0.65, 0.8, 1.0],
-                ),
-              ),
-              child: CircleAvatar(
-                radius: 30, // circle size
-                backgroundColor: Colors.grey[300],
-                backgroundImage: NetworkImage(imageUrl),
-              ),
-            ),
+  Widget _buildStoryCircle() {
+    return BlocConsumer<StoryPageBloc, StoryPageState>(
+      listener: (context, state) {},
+      builder: (context, state) {
+        // safely get articles list
+        final articles = state.responseData?.articles ?? [];
+
+        if (articles.isEmpty) {
+          return const SizedBox(
+            height: 80,
+            child: Center(child: Text('No stories available')),
           );
-        },
-      ),
+        }
+
+        return SizedBox(
+          height: 80,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: Constants.horizontalPadding),
+            itemCount: articles.length,
+            separatorBuilder: (_, __) => const SizedBox(width: 12),
+            itemBuilder: (_, index) {
+              final article = articles[index];
+              final imageUrl = article.urlToImage ?? ''; // default to empty string
+
+              return GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    '/StoryOpenPage',
+                    arguments: {'index': index},
+                  );
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(3),
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xFF290849),
+                        Color(0xFF8C2DE3),
+                        Color(0xFF6A1B9A),
+                      ],
+                    ),
+                  ),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.grey[300],
+                    backgroundImage: imageUrl.isNotEmpty
+                        ? NetworkImage(imageUrl)
+                        : const AssetImage('assets/placeholder.png')
+                    as ImageProvider,
+                  ),
+                ),
+              );
+            },
+          ),
+        );
+      },
     );
   }
-
 
 
   // Builds a simple section title.
