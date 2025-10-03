@@ -11,8 +11,6 @@ import 'Logging.dart';
 class NetworkApiService extends BaseApiService {
   @override
   Future getResponse(String url) async {
-    String? token = "";
-    token = await AppPreferences().getAppToken();
     dynamic responseJson;
     try {
       Dio _dio =
@@ -20,7 +18,7 @@ class NetworkApiService extends BaseApiService {
             HttpHeaders.contentTypeHeader: "application/json",
           }))
             ..interceptors.add(Logging());
-      final response = await _dio.get('${BaseApiService.BASE_URL}$url&apiKey=${ApiEndPoints.APIKEY}');
+      final response = await _dio.get('$url&apiKey=${ApiEndPoints.APIKEY}');
       responseJson = returnResponse(response);
     } on SocketException {
       throw FetchDataException('No Internet Connection');

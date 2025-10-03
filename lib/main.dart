@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:trueverse/utils/routes/routes.dart';
 import 'package:trueverse/view/Homepage/home_page_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trueverse/view/Story/story_page_bloc.dart';
 
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
@@ -11,7 +12,8 @@ void main() {
   runApp(
       MultiBlocProvider(
           providers: [
-            BlocProvider<HomePageBloc>(create: (_) => HomePageBloc(),),
+            BlocProvider<HomePageBloc>(create: (_) => HomePageBloc()),
+            BlocProvider<StoryPageBloc>(create: (_) => StoryPageBloc()),
           ],
         child: MyApp(),)
   );
